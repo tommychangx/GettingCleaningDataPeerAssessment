@@ -24,3 +24,29 @@ The cleaned data was transformed from :
     "subject.test.txt/subject_train.test" : An identifier of the subject who carried out the experiment
 
 
+Run 'run_analysis.R' to performs cleaning up the data:
+
+    1. Merges the training and test sets to create one data set
+	import and merge "X_train.txt/X_test.txt"
+    import and merge "y_train.txt/y_test.txt"  
+    import and merge "subject.test.txt/subject_train.test" 
+
+	* 10299 records are obtained
+	
+    2. Extracts only the measurements on the mean and standard deviation for each measurement.
+
+	* Chooise only "mean" or "std" features from "features.txt":
+	* 66 attributes are obtained as only 66 attributes are with "-mean", "-std" 
+
+	
+    3. Applies descriptive activity names to name the activities in the data set:
+
+	* Reads activity_labels.txt
+	* Use merge function to extract activity names 	
+
+    4.  Appropriately labels the data set with descriptive activity names. 
+	* Done
+
+    5. Creates a second, independent tidy data set with the average of each variable for each activity and each subject.
+	The result is saved as data.txt, a 180x68 data frame, the first column contains subject, the second column contains activity names, and then the averages for each of the 66 attributes are in the other cols
+	
